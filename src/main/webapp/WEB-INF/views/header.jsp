@@ -13,7 +13,6 @@
 	.lh-condensed { line-height: 1.25; }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="resources/js/formEvent.js"></script>
 </head>
 <body class="homepage is-preload">
 	<div class="container">
@@ -21,14 +20,21 @@
 			<div
 				class="row flex-nowrap justify-content-between align-items-center">
 				<div class="col-4 pt-1">
-					<a class="text-muted" href="#">Subscribe</a>
+					<a class="text-muted" href="main">Subscribe</a>
 				</div>
 				<div class="col-4 text-center">
-					<a class="blog-header-logo text-dark" href="#">쇼핑몰 만들기</a>
+					<a class="blog-header-logo text-dark" href="main">쇼핑몰 만들기</a>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
-					</a> <a class="btn btn-sm" href="join">Sign up</a>
-					</a> <a class="btn btn-sm" href="#">Sign in</a>
+					<%
+					String email = (String)session.getAttribute("email");
+					if(email ==  null ||  email.equals("")){%>
+					</a> <a class="btn btn-sm" href="join">회원가입</a>
+					</a> <a class="btn btn-sm" href="login">로그인</a>
+					<%}else{ %>
+					</a> <a class="btn btn-sm" href="#">마이페이지</a>				
+					</a> <a class="btn btn-sm" href="logout">로그아웃</a>				
+					<%} %>
 				</div>
 			</div>
 		</header>

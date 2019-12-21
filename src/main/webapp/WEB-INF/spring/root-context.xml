@@ -19,5 +19,8 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="xyz.soncm.shop.main.model.LoginMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
 </beans>
