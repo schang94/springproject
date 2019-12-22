@@ -4,6 +4,7 @@
 <script src="resources/js/joinEvent.js"></script>
 <div class="col-md-8 order-md-1 mx-auto">
 	<h4 class="mb-3">회원가입</h4>
+	<hr class="mb-4">
 	<form action="join" method="post" id="joinFrm">
 		<div class="mb-3">
 			<label for="email">이메일</label> 

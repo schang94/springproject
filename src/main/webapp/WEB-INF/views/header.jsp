@@ -20,40 +20,50 @@
 			<div
 				class="row flex-nowrap justify-content-between align-items-center">
 				<div class="col-4 pt-1">
-					<a class="text-muted" href="main">Subscribe</a>
 				</div>
 				<div class="col-4 text-center">
-					<a class="blog-header-logo text-dark" href="main">쇼핑몰 만들기</a>
+					<a class="blog-header-logo text-dark" href="main">
+						<h4>쇼핑몰 만들기</h4>
+					</a>
 				</div>
 				<div class="col-4 d-flex justify-content-end align-items-center">
 					<%
 					String email = (String)session.getAttribute("email");
 					if(email ==  null ||  email.equals("")){%>
-					</a> <a class="btn btn-sm" href="join">회원가입</a>
-					</a> <a class="btn btn-sm" href="login">로그인</a>
+					</a> <a class="p-2 small text-muted" href="join">회원가입</a>
+					</a> <a class="p-2 small text-muted" href="login">로그인</a>
 					<%}else{ %>
-					</a> <a class="btn btn-sm" href="#">마이페이지</a>				
-					</a> <a class="btn btn-sm" href="logout">로그아웃</a>				
+					</a> <a class="p-2 small text-muted" href="#">마이페이지</a>				
+					</a> <a class="p-2 small text-muted" href="logout">로그아웃</a>				
 					<%} %>
 				</div>
 			</div>
 		</header>
-
-		<div class="nav-scroller py-1 mb-2">
-			<nav class="nav d-flex justify-content-between">
-				<a class="p-2 text-muted" href="#">World</a> <a
-					class="p-2 text-muted" href="#">U.S.</a> <a class="p-2 text-muted"
-					href="#">Technology</a> <a class="p-2 text-muted" href="#">Design</a>
-				<a class="p-2 text-muted" href="#">Culture</a> <a
-					class="p-2 text-muted" href="#">Business</a> <a
-					class="p-2 text-muted" href="#">Politics</a> <a
-					class="p-2 text-muted" href="#">Opinion</a> <a
-					class="p-2 text-muted" href="#">Science</a> <a
-					class="p-2 text-muted" href="#">Health</a> <a
-					class="p-2 text-muted" href="#">Style</a> <a class="p-2 text-muted"
-					href="#">Travel</a>
-			</nav>
-		</div>
+		<nav class="navbar navbar-expand-lg">
+			<ul class="navbar-nav mr-auto">
+      			<li class="nav-item dropdown">
+        			<a class="btn btn-default dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          			<img src="resources/img/menu.png">
+	        		</a>
+	        		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	        			<a class="dropdown-item" href="#">Action</a>
+			          	<a class="dropdown-item" href="#">Another action</a>
+			          	<div class="dropdown-divider"></div>
+			          	<a class="dropdown-item" href="#">Something else here</a>
+			        </div>
+	      		</li>
+    		</ul>
+    		<div class="py-1 mb-2">
+    			<ul class="navbar-nav">
+    				<li class="nav-item">
+			        	<a class="p-2 text-muted display-5" href="category">카테고리 추가</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="p-2 text-muted display-5" href="#">물품등록</a>
+			      	</li>
+    			</ul>
+	  		</div>
+		</nav>
 
 		<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 			<div class="col-md-6 px-0">
