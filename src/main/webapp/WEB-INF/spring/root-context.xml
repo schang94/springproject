@@ -20,7 +20,17 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="xyz.soncm.shop.main.model.LoginMapper" />
+		<property name="mapperInterface" value="xyz.soncm.shop.main.login.model.LoginMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="xyz.soncm.shop.admin.category.model.CategoryMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="xyz.soncm.shop.main.main.model.CategoryMenuMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
 	</bean>
 </beans>

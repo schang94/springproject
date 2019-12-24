@@ -9,16 +9,26 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <style type="text/css">
-	.container {max-width: 960px;}
-	.lh-condensed { line-height: 1.25; }
+
+
+	.dropdown-submenu:hover .dropdown-menu,
+	.dropdown-submenu:focus .dropdown-menu {
+	  display: block;
+	  margin-top: -1px;
+	  margin-left: -1px;
+	  top: 0px;
+	  left: 100%;
+	  min-height: 100%;
+	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="resources/js/category_menuEvent.js"></script>
+
 </head>
 <body class="homepage is-preload">
-	<div class="container">
+	<div class=container-lg>
 		<header class="blog-header py-3">
-			<div
-				class="row flex-nowrap justify-content-between align-items-center">
+			<div class="row flex-nowrap justify-content-between align-items-center">
 				<div class="col-4 pt-1">
 				</div>
 				<div class="col-4 text-center">
@@ -39,18 +49,15 @@
 				</div>
 			</div>
 		</header>
-		<nav class="navbar navbar-expand-lg">
+		<nav class="navbar navbar-expand-lg mb-5 border-bottom">
 			<ul class="navbar-nav mr-auto">
-      			<li class="nav-item dropdown">
-        			<a class="btn btn-default dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			<li class="nav-item dropdown" id="nav_menu">
+        			<a class="btn btn-default" href="https://www.naver.com/" id="111navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          			<img src="resources/img/menu.png">
 	        		</a>
-	        		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	        			<a class="dropdown-item" href="#">Action</a>
-			          	<a class="dropdown-item" href="#">Another action</a>
-			          	<div class="dropdown-divider"></div>
-			          	<a class="dropdown-item" href="#">Something else here</a>
-			        </div>
+	        		<ul class="dropdown-menu add-to-ul" aria-labelledby="navbarDropdown">
+			          	
+			        </ul>
 	      		</li>
     		</ul>
     		<div class="py-1 mb-2">
@@ -65,16 +72,4 @@
 	  		</div>
 		</nav>
 
-		<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-			<div class="col-md-6 px-0">
-				<h1 class="display-4 font-italic">Title of a longer featured
-					blog post</h1>
-				<p class="lead my-3">Multiple lines of text that form the lede,
-					informing new readers quickly and efficiently about what’s most
-					interesting in this post’s contents.</p>
-				<p class="lead mb-0">
-					<a href="#" class="text-white font-weight-bold">Continue
-						reading...</a>
-				</p>
-			</div>
-		</div>
+		

@@ -5,20 +5,20 @@
 <div class="col-md-8 order-md-1 mx-auto">
 	<h4 class="mb-3">회원가입</h4>
 	<hr class="mb-4">
-	<form action="join" method="post" id="joinFrm">
+	<form action="join" method="post" id="joinFrm" >
 		<div class="mb-3">
 			<label for="email">이메일</label> 
-			<input type="email" class="form-control" id="email" name="user_mail">
+			<input type="email" class="form-control" id="email" name="user_mail" autocomplete="email">
 			<span class="text-danger" id="email_text"></spna>
 		</div>
 		<div class="mb-3">
 			<label for="pwd">비밀번호</label> 
-			<input type="password" class="form-control" id="pwd" name="user_pwd">
+			<input type="password" class="form-control" id="pwd" name="user_pwd" autocomplete="new-password">
 			<span class="text-danger" id="pwd_text"></spna>
 		</div>
 		<div class="mb-3">
 			<label for="pwdck">비밀번호 재확인</label>
-			<input type="password" class="form-control" id="pwdck">
+			<input type="password" class="form-control" id="pwdck" name="user_pwdck" autocomplete="new-password">
 			<span class="text-danger" id="pwdck_text"></spna>
 		</div>
 		<div class="mb-3">
