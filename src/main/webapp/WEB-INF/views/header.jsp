@@ -66,7 +66,7 @@
 			        	<a class="p-2 text-muted display-5" href="category">카테고리 추가</a>
 			      	</li>
 			      	<li class="nav-item">
-			        	<a class="p-2 text-muted display-5" href="#">물품등록</a>
+			        	<a class="p-2 text-muted display-5" href="product">물품등록</a>
 			      	</li>
     			</ul>
 	  		</div>

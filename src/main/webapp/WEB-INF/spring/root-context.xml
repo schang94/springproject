@@ -33,4 +33,9 @@
 		<property name="mapperInterface" value="xyz.soncm.shop.main.main.model.CategoryMenuMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
 	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="xyz.soncm.shop.admin.product.model.ProductMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
 </beans>

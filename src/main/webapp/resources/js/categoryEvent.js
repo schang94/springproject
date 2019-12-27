@@ -1,4 +1,3 @@
-document.write("<script type='text/javascript' src='resources/js/category_menuEvent.js' ><" + "/script>");
 jQuery(document).ready(function(){
 	catagoryFunc.admin_category_one_list();
 	jQuery("#category_one_btn").on("click", function(event){
@@ -15,7 +14,7 @@ jQuery(document).ready(function(){
 				if(text == "true"){
 					jQuery('#category_one_modal').modal('hide');
 					jQuery('#c_main_one').val('');
-					catagory_menuFunc.category_menu();
+					catagoryFunc.category_menu();
 					catagoryFunc.admin_category_one_list();
 				}else if(text == "overlap"){
 					jQuery("#catagory_one_text").html("이미 등록된 카테고리입니다.");
@@ -43,7 +42,7 @@ jQuery(document).ready(function(){
 					jQuery('#category_two_modal').modal('hide');
 					catagoryFunc.admin_category_two_list(jQuery("#c_main_two").val());
 					jQuery('#c_sub_two').val('');
-					catagory_menuFunc.category_menu();
+					catagoryFunc.category_menu();
 				}else if(text == "overlap"){
 					jQuery("#catagory_two_text").html("이미 등록된 카테고리입니다.");
 				}else if(text == 'false'){
@@ -80,6 +79,7 @@ const catagoryFunc = {
 					str += '<span class="badge badge-pill badge-dark" name="category_one_item" id="c_main_' + obj["c_main"]+ '" style="cursor:pointer">' + obj["c_main"] + "</span>";
 					str += "</div>";
 				});
+				jQuery("#category_one_list_field").html(str);
 			},
 			error : function(e) {
 				alert(e);
@@ -105,6 +105,19 @@ const catagoryFunc = {
 				jQuery("#category_two_list_field").html(str);
 				jQuery("#category_two_add_btn").html('<button class="btn btn-dark" data-toggle="modal" data-target="#category_two_modal">추가</button>');
 				jQuery("#c_main_two").val(c_main);
+			},
+			error : function(e) {
+				alert(e);
+			}
+		});	
+	},
+	"category_menu" : function(){
+		jQuery.ajax({
+			type : "get",
+			url : "main/category",
+			dataTpye : "html",
+			success : function(html){
+				jQuery(".add-to-ul").html(html);
 			},
 			error : function(e) {
 				alert(e);
