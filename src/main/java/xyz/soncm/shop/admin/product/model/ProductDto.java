@@ -1,7 +1,7 @@
 package xyz.soncm.shop.admin.product.model;
 
 public class ProductDto {
-	private String id, p_name, p_price, p_stock;
+	private String id, post_title, post_delivery_charge, post_thumbnail, post_content, post_data, category_id;
 
 	public String getId() {
 		return id;
@@ -11,27 +11,52 @@ public class ProductDto {
 		this.id = id;
 	}
 
-	public String getP_name() {
-		return p_name;
+	public String getPost_title() {
+		return post_title;
 	}
 
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+	public void setPost_title(String post_title) {
+		this.post_title = post_title;
 	}
 
-	public String getP_price() {
-		return p_price;
+	public String getPost_delivery_charge() {
+		return post_delivery_charge;
 	}
 
-	public void setP_price(String p_price) {
-		this.p_price = p_price;
+	public void setPost_delivery_charge(String post_delivery_charge) {
+		this.post_delivery_charge = post_delivery_charge;
 	}
 
-	public String getP_stock() {
-		return p_stock;
+	public String getPost_thumbnail() {
+		return post_thumbnail;
 	}
 
-	public void setP_stock(String p_stock) {
-		this.p_stock = p_stock;
+	public void setPost_thumbnail(String post_thumbnail) {
+		this.post_thumbnail = post_thumbnail;
 	}
+
+	public String getPost_content() {
+		return post_content;
+	}
+
+	public void setPost_content(String post_content) {
+		this.post_content = post_content;
+	}
+
+	public String getPost_data() {
+		return post_data;
+	}
+
+	public void setPost_data(String post_data) {
+		this.post_data = post_data;
+	}
+
+	public String getCategory_id() {
+		return category_id;
+	}
+
+	public void setCategory_id(String category_id) {
+		this.category_id = category_id;
+	}
+
 }

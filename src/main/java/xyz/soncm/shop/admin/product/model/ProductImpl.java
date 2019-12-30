@@ -9,10 +9,11 @@ import xyz.soncm.shop.admin.product.controller.ProductBean;
 public class ProductImpl implements ProductDao {
 	
 	@Autowired
-	ProductMapper productMapper;
+	private ProductMapper productMapper;
 	
 	@Override
 	public int productInsert(ProductBean bean) {
 		return productMapper.productInsert(bean);
 	}
+
 }

@@ -27,7 +27,6 @@ public class CategoryMenuController {
 	@ResponseBody
 	public ModelAndView list_all(){
 		
-		System.out.println("진입");
 		ModelAndView model = new ModelAndView("category_menu");
 
 		ArrayList<CategoryMenuDto> dataList_all = (ArrayList<CategoryMenuDto>)dao.select_all();
@@ -36,7 +35,6 @@ public class CategoryMenuController {
 		model.addObject("dataAll", dataList_all);
 		model.addObject("dataMain", dataList_main);
 		
-		System.out.println("완료");
 		return model;
 	}
 

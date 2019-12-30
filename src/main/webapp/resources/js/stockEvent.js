@@ -77,7 +77,7 @@ const productFunc = {
 						str += "<td class='text-truncate'>" + obj["p_stock"]+"</td>";
 						str += "</tr>";	
 					});
-					jQuery("#product_list").html(str);
+					jQuery("#stock_list").html(str);
 				},
 				error : function(e) {
 					alert(e);

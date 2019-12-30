@@ -10,18 +10,11 @@ import xyz.soncm.shop.admin.product.model.ProductDao;
 
 @Controller
 public class ProductController {
-
+	
 	@Autowired
 	@Qualifier("productImpl")
 	private ProductDao dao;
 	
 	@RequestMapping(value = "product", method = RequestMethod.GET)
-	public void productInsert() {}
-	
-	@RequestMapping(value = "product", method = RequestMethod.POST)
-	public String productInsert(ProductBean bean) {
-		int num = dao.productInsert(bean);
-		
-		return "redirect:product";
-	}
+	public void product_insert_page() {}
 }

@@ -35,6 +35,11 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="xyz.soncm.shop.admin.stock.model.StockMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="xyz.soncm.shop.admin.product.model.ProductMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
 	</bean>

@@ -20,6 +20,10 @@
 	  left: 100%;
 	  min-height: 100%;
 	}
+	
+	.table {
+		table-layout: fixed;
+	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="resources/js/category_menuEvent.js"></script>
@@ -66,7 +70,10 @@
 			        	<a class="p-2 text-muted display-5" href="category">카테고리 추가</a>
 			      	</li>
 			      	<li class="nav-item">
-			        	<a class="p-2 text-muted display-5" href="product">물품등록</a>
+			        	<a class="p-2 text-muted display-5" href="stock">재고등록</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="p-2 text-muted display-5" href="product">상품등록</a>
 			      	</li>
     			</ul>
 	  		</div>
